@@ -1,0 +1,18 @@
+# microservice-config-server-eureka
+server:
+  port: 8080
+spring:
+  application:
+    name: microservice-config-server-eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:1932361772/gitconfig.git
+#        encrypt:
+#          enabled: true
+#          username: #仓库用户名
+#          password: #仓库密码
+
+encrypt:
+  key: foo  # curl -X POST http://localhost:8080/encrypt -d foobar  失败
